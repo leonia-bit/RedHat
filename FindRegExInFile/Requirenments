@@ -1,0 +1,25 @@
+                                             Requirenments.
+                                             RedHat Project
+                            Project name: Find(match) patterns according to regexp.
+                                              Creator: RedHat.
+1. Search lines matching regular expressions
+2. Implementation: Python
+3. Input:
+        a. STDIN
+        b. File
+3. Input Format: ASCII
+4. Output: STDOUT
+5. Output format:
+        a. file name
+        b. list: {line number: line}
+        c. OOP (design pasterns comments)
+6. Input optional keywords:
+        a. -u ( --underscore ) which prints '^' under the matching text
+        b. -c ( --color ) which highlight matching text [1] according to pixelbit.org
+        c. -m ( --machine ) which generate machine readable output
+                  format: file_name:no_line:start_pos:matched_text
+7. Python script format: PEP8 coding
+8. Matching regexp module: re
+9. Implementation time frame: 1 week (start: 23/12/2019)
+10: OS: Windows 10 (64bit)
+
