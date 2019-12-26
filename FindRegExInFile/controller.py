@@ -1,5 +1,4 @@
-"""
-     File name: controller.py
+"""File name: controller.py
     Description: present Model View Controller Pattern: controller part
                  Controller interacts with <model> MVC.model through the get_all() method which fetches all the records
                   from the server and displayed to the end user.

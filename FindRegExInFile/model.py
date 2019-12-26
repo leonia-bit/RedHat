@@ -1,6 +1,5 @@
 #!/usr/bin/python
-"""
-File Model.py
+"""File Model.py
 Description:
     Implement design pattern logic for: Model View Controller Pattern (MVC)
 Class: FilesData

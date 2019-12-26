@@ -1,5 +1,4 @@
-"""
-    File name: utils.py
+"""File name: utils.py
     Description: different type of utils can be developed in this file
     Class: LogClass
     Description: implement log functionality

@@ -1,5 +1,4 @@
-"""
-    File name: view.py
+"""File name: view.py
     Description: present Model View Controller Pattern: view part
                  View represents the client, which interact with the end user.
     Module functions:

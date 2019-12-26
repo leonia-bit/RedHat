@@ -1,5 +1,4 @@
-"""
-    File name: formatprint.py
+"""File name: formatprint.py
     Description: present template design pattern:
                  defines a basic algorithm in a base class using abstract operation where subclasses override the
                  concrete behavior
