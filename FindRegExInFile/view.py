@@ -57,6 +57,6 @@ def start_view():
     print('Do you want to see file data?[y/n]')
 
 
-# interface to finish iteract with user
+# interface to finish interact with user
 def end_view():
     print('Goodbye!')
