@@ -1,0 +1,188 @@
+                                                Low Level Design.
+                                 Project target: Find(match) patterns according to regexp.
+1. Command line parameters: optparse
+++++++++++++++++++++++++++++++++++++
+   -r (--regex)
+   -f (--files)
+      if option not provided read from STDIN
+   -u ( --underscore )
+      which prints '^' under the matching text
+   -c ( --color )
+      which highlight matching text
+   -m ( --machine )
+      which generate machine readable output format: file_name:no_line:start_pos:matched_text
+
+
+2.  Server side: model.py
++++++++++++++++++++++++++
+    ClassName: FilesData
+        CLass: attributes:
+               file_name_list: contain files name
+               file_data_list: contains data from all files
+         Class Methods:
+               constructor: input parameter: file_name_list
+               get_all_function: return file_data_list
+
+
+3.  Client side: view.py
+++++++++++++++++++++++++
+    File methods:
+        start_view:
+             parameters:
+                NONE
+             description:
+                interact with user at the start
+              return value:
+                NONE
+        show_all_view:
+                parameters:
+                    file_name_list
+                description:
+                    get the data  from the server using controller module
+                    and display formatted output using FotmtPrint class
+                return value:
+                    NONE
+        end_view:
+              parameters:
+                NONE:
+              description:
+                interact with user on the end of process
+              return value:
+                    NONE
+
+
+4. Formatted output
++++++++++++++++++++
+        ======================
+        ClassName: FormatPrint
+              description:
+              template class for derived classes that will be reasonable to print data according to user
+              input
+        CLass: attributes:
+              file_name: data from file name
+              line_number: line number in file
+              line: contain one line from file
+              regexp_pattern: regexp pattern to manipulate on the data
+         Class Methods:
+               constructor:
+                     parameters:
+                        file_name: data from file name
+                        line_number: line number in file
+                        line: contain one line from file
+                        regexp_pattern: regexp pattern to manipulate on the data
+               prepare_format: abstract method
+                     parameters:
+                        NONE
+                     description: abstract method, implemented in derived class according to instance
+                     return value:
+                        NONE
+               print_format: abstract method
+                     parameters:
+                        NONE
+                     description: abstract method, implemented in derived class for print according to instance
+                     return value:
+                        NONE
+               go:
+                     parameters:
+                        NONE
+                     description: call to prepare format and print format class methods
+                     return value:
+                        NONE
+
+         ==========================
+         ClassName: PrintUnderscore
+              description:
+              prepare and print ^ sign under matched regexp pattern. Derived from FormatPrint template
+              input
+        CLass: attributes:
+              underscore_line: contain ^ signs under matched patterns
+         Class Methods:
+               constructor: parameters passed to base class
+                     parameters:
+                        file_name: data from file name
+                        line_number: line number in file
+                        line: contain one line from file
+                        regexp_pattern: regexp pattern to underscore with ^
+               prepare_format:
+                     parameters:
+                        NONE
+                     description: prepare line with ^ signs in place of regexp patterns
+                     return value:
+                        NONE
+               print_format:
+                     parameters:
+                        NONE
+                     description: print file name: line number: line and under print ^ signs
+                     under regexp patterns
+                     return value:
+                        NONE
+
+
+          =======================
+          ClassName: PrintMachine
+              description:
+              prepare and print data with machine format: file_name:no_line:start_pos:matched_text.
+              Derived from FormatPrint template
+              input
+        CLass: attributes:
+              matched_data_list: contain list, matched patterns and start positions, file name and line number
+         Class Methods:
+               constructor: parameters passed to base class
+                     parameters:
+                        file_name: data from file name
+                        line_number: line number in file
+                        line: contain one line from file
+                        regexp_pattern: regexp pattern to find patterns.
+               prepare_format:
+                     parameters:
+                        NONE
+                     description: prepare list of dictionaries to print: file_name:no_line:start_pos:matched_text
+                     return value:
+                        NONE
+               print_format:
+                     parameters:
+                        NONE
+                     description: print: file_name:no_line:start_pos:matched_text. For each pattern
+                     specific line.
+                     under regexp patterns
+                     return value:
+                        NONE
+
+
+         =====================
+         ClassName: PrintColor
+              description:
+              prepare and print colored in place of matched regexp patterns. Derived from FormatPrint template
+              input
+        CLass: attributes:
+              color_line: contain colored regexp patterns that were matched
+         Class Methods:
+               constructor: parameters passed to base class
+                     parameters:
+                        file_name: data from file name
+                        line_number: line number in file
+                        line: contain one line from file
+                        regexp_pattern: regexp pattern to changed regexp patterns with colored
+                        patterns that were matched
+               prepare_format:
+                     parameters:
+                        NONE
+                     description: prepare line with colored patterns that were matched
+                     return value:
+                        NONE
+               print_format:
+                     parameters:
+                        NONE
+                     description: print file name: line number: line with colored patterns that where matched
+                     under regexp patterns
+                     return value:
+                        NONE
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+                                    High Level Design.
+                     Project target: Find(match) patterns according to regexp.
+                                Creator: Leonid Klebanov.
+
+1.  Model View Controller (MVC) design pattern
+    a. Model
+       -  get all db data to controller module
+
+    b. View
+        - show the all data to the end user
+
+    c. Controller
+         - get the all data from the Model module
+         - display all the data using View module
+
+2.  Template design pattern
+    a. base class:
+         - interface for <prepare print format>
+         - interface for display formatted data
+
+    b. derived class underscore format
+         - implementation of <prepare print format> to underscore format
+         - implementation of <display formatted> to underscore format
+
+     b. derived class machine format
+         - implementation of <prepare print format> to machine format
+         - implementation of <display formatted> to machine format
+
+     b. derived class color format
+         - implementation of <prepare print format> to color format
+         - implementation of <display formatted> to color format
+
+
+
+
+
+
