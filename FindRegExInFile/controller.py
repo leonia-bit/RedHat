@@ -23,7 +23,7 @@ def get_user_data(file_data_list, line_num):
     user_line = input()
     tmp_list.append((line_num, user_line))
 
-    file_data["line"] = tmp_list.copy();
+    file_data["line"] = tmp_list.copy()
     file_data_list.append(file_data.copy())
     tmp_list.clear()
     file_data.clear()
