@@ -1,9 +1,11 @@
 #!/usr/bin/python
-from FindRegExInFile.utils import LogClass, init_log
+from FindRegExInFile.utils import LogClass
+from FindRegExInFile.utils import init_log
 from FindRegExInFile.model import FilesData
 import optparse
 import re
 import controller
+
 
 OUTPUT_FORMAT_COLOR = 0
 OUTPUT_FORMAT_UNDERSCORE = 1
