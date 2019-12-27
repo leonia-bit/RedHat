@@ -2,7 +2,6 @@ from utils import init_log
 import optparse
 import re
 
-
 # cmd line: available output format
 OUTPUT_FORMAT_COLOR = 0
 OUTPUT_FORMAT_UNDERSCORE = 1
@@ -59,12 +58,17 @@ class GetUserOptions():
                                )
 
     # get user options from command line
-    def get_user_options(self):
+    def get_user_options(self, test_framework=False):
         files_list = []
         re_pattern = ''
         output_format = ''
 
         options, args = self.parser.parse_args()
+        if test_framework:
+            options.files = True
+            options.regexp = True
+            options.color = True
+            args = ["file1.txt", "file2.txt", "file3.txt", "[q]{3,4}"]
 
         self.log.info(("Option: files: y", options.files))
         self.log.info(("Option: regexp: ", options.regexp))
