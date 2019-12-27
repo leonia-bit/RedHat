@@ -1,8 +1,7 @@
 from FindRegExInFile.utils import init_log
 import optparse
 import re
-import unittest
-import os
+
 
 # cmd line: available output format
 OUTPUT_FORMAT_COLOR = 0

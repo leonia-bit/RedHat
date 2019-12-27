@@ -1,8 +1,6 @@
 from FindRegExInFile.cmdline import GetUserOptions
 import controller
 
-import unittest
-import os
 
 if __name__ == '__main__':
     cmd_line = GetUserOptions()
