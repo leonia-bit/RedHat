@@ -1,7 +1,6 @@
 from cmdline import GetUserOptions
 import unittest
 
-
 class TestCommandLine(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -19,5 +18,4 @@ class TestCommandLine(unittest.TestCase):
 
 
 if __name__ == '__main__':
-
     unittest.main()
