@@ -8,8 +8,11 @@
                  Here, each parameter represents the attribute to create a part of formatted string like color,
                  underscore and machine format.
 """
-from termcolor import colored
 import re
+import sys
+from termcolor import *
+import colorama
+
 
 FIRST_POSITION = 0
 LAST_POSITION = 1
@@ -88,6 +91,7 @@ class PrintColor(FormatPrint):
         last_pos = 0
         curr_pos = 0
         line_len = len(self.line)
+        colorama.init()
 
         while last_pos < line_len:
             curr_pos = last_pos
@@ -100,7 +104,7 @@ class PrintColor(FormatPrint):
                     self.color_line += self.line[last_pos]
                     last_pos += 1
 
-                self.color_line += colored(search_res.group(), "yellow")
+                self.color_line += colored(search_res.group(), "magenta")
                 last_pos += (pos[LAST_POSITION] - pos[FIRST_POSITION])
             else:
                 # end line
@@ -113,7 +117,9 @@ class PrintColor(FormatPrint):
 
     # print data with colored regexp patterns
     def print_format(self):
-        print(self.file_name + ":" + self.line_number + ":" + self.color_line)
+        colorama.init()
+        # cprint('hello', 'red')
+        cprint(self.file_name + ":" + self.line_number + ":" + self.color_line)
         self.color_line = ''
 
 

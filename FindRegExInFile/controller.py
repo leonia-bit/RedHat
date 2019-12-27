@@ -7,8 +7,8 @@
                  and provide it to MVC.view module (client) to view data to end user.
 """
 
-from FindRegExInFile.model import FilesData
-from FindRegExInFile import view
+import view
+from model import FilesData
 
 
 # read data entered by user from command line

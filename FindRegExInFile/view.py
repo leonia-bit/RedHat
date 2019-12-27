@@ -4,8 +4,8 @@
     Module functions:
     Description: this code represents the model’s data to user.
 """
-from FindRegExInFile.formatprint import *
-import re
+
+from formatprint import *
 
 # tuple holders defines
 LINE_NUMBER_PLACE = 0
