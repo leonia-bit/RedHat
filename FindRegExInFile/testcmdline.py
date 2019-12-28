@@ -1,16 +1,17 @@
+
 from cmdline import GetUserOptions
 import unittest
 
 
 # import HTMLTestRunner
 
-class TestCommandLine(unittest.TestCase):
+class TestCmdLine(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.cmd_line = GetUserOptions()
         cls.cmd_line.set_user_options()
 
-    def test_cmdline(self):
+    def test_cmd_line(self):
         f_list, regexp, o_format = self.cmd_line.get_user_options(True)
         assert o_format != '', "Module: cmdline. Output format can't be empty."
         assert regexp != '', "Module: cmdline: Regexp pattern can't be empty"
