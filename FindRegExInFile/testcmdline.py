@@ -14,6 +14,7 @@ class TestCommandLine(unittest.TestCase):
         f_list, regexp, o_format = self.cmd_line.get_user_options(True)
         assert o_format != '', "Module: cmdline. Output format can't be empty."
         assert regexp != '', "Module: cmdline: Regexp pattern can't be empty"
+        assert f_list != [] , "Module: cmdline: File list can't be empty"
 
     @classmethod
     def tearDownClass(cls):
