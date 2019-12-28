@@ -6,7 +6,7 @@ import unittest
 
 # import HTMLTestRunner
 
-class TestCommandLine(unittest.TestCase):
+class TestView(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.cmd_line = GetUserOptions()
