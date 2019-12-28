@@ -18,6 +18,7 @@ def get_output_format(i):
     return switcher.get(i, "Invalid output format")
 
 
+# set format for optparse module, read and return user command line parameters
 class GetUserOptions():
     log = None
     parser = None
@@ -30,11 +31,8 @@ class GetUserOptions():
         self.log.info("Start Program...")
 
         self.log.info("...")
-
         self.usage = "usage: %prog [options] arg1 arg2"
-
         self.parser = optparse.OptionParser(usage=self.usage)
-
         self.parser = optparse.OptionParser()
 
         self.parser.add_option("-f", "--files",
