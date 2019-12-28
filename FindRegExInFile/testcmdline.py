@@ -1,4 +1,3 @@
-
 from cmdline import GetUserOptions
 import unittest
 
