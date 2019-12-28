@@ -20,6 +20,7 @@ def get_output_format(i):
     return switcher.get(i, "Invalid output format")
 
 
+# format and read user input
 class GetUserOptions():
     log = None
     parser = None
@@ -57,7 +58,7 @@ class GetUserOptions():
                                )
 
     # get user options from command line
-    def get_user_options(self, test_framework = False):
+    def get_user_options(self, test_framework=False):
         files_list = []
         re_pattern = ''
         output_format = ''
@@ -86,7 +87,7 @@ class GetUserOptions():
             exit(0)
 
         # check command line: if at least one output format option provided
-        if options.color + options.machine + options.underscore == 0:
+        if not (options.color or options.machine or options.underscore):
             self.log.info("Provide one from following options: color|machine|underscore. Program terminated!!!")
             exit(0)
         '''
