@@ -36,6 +36,7 @@ def show_all_view(file_data_list, regexp_pattern, output_format):
 
     for data in file_data_list:
         for line in data["line"]:
+
             if re.search(regexp_pattern, line[LINE_PLACE]):
                 if output_format == 'color':
                     print_color = PrintColor(data["name"], str(line[LINE_NUMBER_PLACE]),

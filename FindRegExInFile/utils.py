@@ -5,6 +5,7 @@
 
 """
 
+
 # importing module
 import logging
 
@@ -12,7 +13,7 @@ import logging
 # print user command line parameters to file.log file in current directory:
 def init_log():
     # Create and configure logger
-    logging.basicConfig(filename="log/file.log",
+    logging.basicConfig(filename= "log/file.log",
                         format='%(asctime)s %(message)s',
                         filemode='w')
 
