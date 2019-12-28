@@ -18,7 +18,7 @@ class TestCommandLine(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        print("Test [model] Completed Successfully!")
+        print("Test [:model] Completed Successfully!")
 
 
 if __name__ == '__main__':
