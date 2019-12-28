@@ -14,7 +14,7 @@ class TestCommandLine(unittest.TestCase):
     def test_cmdline(self):
         f_list, regexp, o_format = self.cmd_line.get_user_options(True)
         file_data_list = FilesData(f_list).get_all()
-        assert file_data_list != [], "Check why: files data not available."
+        assert file_data_list != [], "Module: Model. Function get_all. Files data not available."
 
     @classmethod
     def tearDownClass(cls):

@@ -1,6 +1,9 @@
 from cmdline import GetUserOptions
 import unittest
 
+
+# import HTMLTestRunner
+
 class TestCommandLine(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -9,13 +12,17 @@ class TestCommandLine(unittest.TestCase):
 
     def test_cmdline(self):
         f_list, regexp, o_format = self.cmd_line.get_user_options(True)
-        assert o_format != '', "Output format can't be empty."
-        assert regexp != '', "Regexp pattern can't be empty"
+        assert o_format != '', "Module: cmdline. Output format can't be empty."
+        assert regexp != '', "Module: cmdline: Regexp pattern can't be empty"
 
     @classmethod
     def tearDownClass(cls):
-        print("Test Completed Successfully!")
+        print("Test [:cmdline] Completed Successfully!")
 
 
 if __name__ == '__main__':
     unittest.main()
+
+    # ToDo: add 5. HTML report after: 1. unittest will cover, 2. Jenkins, 3. STP, 4. ReleaseNotes
+    # unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(
+    # output='C:/Users/mkbc3/PycharmProjects/RedHat/FindRegExInFile/results'))

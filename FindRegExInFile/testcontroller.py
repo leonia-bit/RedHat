@@ -13,7 +13,7 @@ class TestCommandLine(unittest.TestCase):
 
     def test_cmdline(self):
         f_list, regexp, o_format = self.cmd_line.get_user_options(True)
-        assert not show_all(f_list, regexp, o_format), "Function: show_all failed."
+        assert not show_all(f_list, regexp, o_format), "Module: controller. Function: show_all failed."
 
     @classmethod
     def tearDownClass(cls):
