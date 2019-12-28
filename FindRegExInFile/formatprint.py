@@ -45,7 +45,6 @@ class PrintUnderscore(FormatPrint):
 
     # format data: print ^ sign under matched pattern
     def prepare_format(self):
-
         last_pos = 0
         curr_pos = 0
         line_len = len(self.line)
@@ -56,22 +55,22 @@ class PrintUnderscore(FormatPrint):
 
             if search_res is not None:
                 pos = search_res.span()
-
+                # run till matched string
                 while last_pos < pos[FIRST_POSITION] + curr_pos:
                     self.underscore_line += ' '
                     last_pos += 1
-
+                # fill with underline character
                 while last_pos < pos[LAST_POSITION] + curr_pos:
                     self.underscore_line += '^'
                     last_pos += 1
             else:
                 break
-
+        # fill with blanks till end of the line
         while last_pos < line_len:
             self.underscore_line += ' '
             last_pos += 1
 
-    # print string: print data and ^ sign under the matched pattern
+    # print string: print data and ^ signs under the matched pattern
     def print_format(self):
         print(self.file_name + ": " + self.line_number + ": " + self.line)
         line_len = len(self.file_name) + len(": ") + len(self.line_number) + len(": ")
@@ -99,12 +98,12 @@ class PrintColor(FormatPrint):
 
             if search_res is not None:
                 pos = search_res.span()
-
+                # run till matched pattern
                 while last_pos < pos[FIRST_POSITION] + curr_pos:
                     self.color_line += self.line[last_pos]
                     last_pos += 1
-
-                self.color_line += colored(search_res.group(), "magenta")
+                # fill with colored pattern
+                self.color_line += colored(search_res.group(), "magenta", attrs=['reverse', 'blink'])
                 last_pos += (pos[LAST_POSITION] - pos[FIRST_POSITION])
             else:
                 # end line
@@ -118,7 +117,6 @@ class PrintColor(FormatPrint):
     # print data with colored regexp patterns
     def print_format(self):
         colorama.init()
-        # cprint('hello', 'red')
         cprint(self.file_name + ":" + self.line_number + ":" + self.color_line)
         self.color_line = ''
 
@@ -141,7 +139,7 @@ class PrintMachine(FormatPrint):
 
             if search_res is not None:
                 pos = search_res.span()
-
+                # data for machine format
                 line_data["file"] = self.file_name
                 line_data["line_number"] = self.line_number
                 line_data["start_pos"] = pos[FIRST_POSITION] + curr_pos
