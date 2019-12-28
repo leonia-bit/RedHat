@@ -1,4 +1,4 @@
-from FindRegExInFile.utils import init_log
+from utils import init_log
 import optparse
 import re
 import unittest
