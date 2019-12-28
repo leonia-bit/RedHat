@@ -8,8 +8,7 @@ Description:
 from cmdline import GetUserOptions
 import unittest
 
-
-# import HTMLTestRunner
+#import HTMLTestRunner
 
 class TestCmdLine(unittest.TestCase):
     @classmethod
@@ -31,6 +30,4 @@ class TestCmdLine(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-    # ToDo: add 5. HTML report after: 1. unittest will cover, 2. STP, 3. ReleaseNotes
-    # unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(
-    # output='C:/Users/mkbc3/PycharmProjects/RedHat/FindRegExInFile/results'))
+    #unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../results"))
