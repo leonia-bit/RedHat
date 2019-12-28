@@ -23,6 +23,6 @@ class TestCommandLine(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-    # ToDo: add 5. HTML report after: 1. unittest will cover, 2. Jenkins, 3. STP, 4. ReleaseNotes
+    # ToDo: add 5. HTML report after: 1. unittest will cover, 2. STP, 3. ReleaseNotes
     # unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(
     # output='C:/Users/mkbc3/PycharmProjects/RedHat/FindRegExInFile/results'))
