@@ -1,3 +1,10 @@
+"""File testcmdline.py
+Description:
+    unittest for command line
+Class: TestCmdLine
+Description:
+    tests reading user parameters from command line
+"""
 from cmdline import GetUserOptions
 import unittest
 

@@ -1,3 +1,10 @@
+"""File testview.py
+Description:
+    unittest for view formatted data
+Class: TestView
+Description:
+    tests module view->HTML
+"""
 from cmdline import GetUserOptions
 from view import show_all_view
 from model import FilesData

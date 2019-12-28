@@ -1,3 +1,10 @@
+"""File testmodel.py
+Description:
+    unittest for model unit
+Class: TestModel
+Description:
+    tests module model->db
+"""
 from cmdline import GetUserOptions
 from model import FilesData
 import unittest

@@ -1,3 +1,10 @@
+"""File testcontroller.py
+Description:
+    unittest for controller
+Class: TestController
+Description:
+    tests module controller->browser
+"""
 from cmdline import GetUserOptions
 from controller import show_all
 import unittest
