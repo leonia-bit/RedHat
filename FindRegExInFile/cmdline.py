@@ -87,7 +87,7 @@ class GetUserOptions():
             exit(0)
 
         # check command line: if at least one output format option provided
-        if options.color + options.machine + options.underscore == 0:
+        if (options.color or options.machine or options.underscore) == False:
             self.log.info("Provide one from following options: color|machine|underscore. Program terminated!!!")
             exit(0)
         '''
