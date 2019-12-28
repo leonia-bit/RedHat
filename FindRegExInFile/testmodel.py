@@ -11,7 +11,7 @@ class TestCommandLine(unittest.TestCase):
         cls.cmd_line = GetUserOptions()
         cls.cmd_line.set_user_options()
 
-    def test_cmdline(self):
+    def test_model(self):
         f_list, regexp, o_format = self.cmd_line.get_user_options(True)
         file_data_list = FilesData(f_list).get_all()
         assert file_data_list != [], "Module: Model. Function get_all. Files data not available."
