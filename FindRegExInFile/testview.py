@@ -16,6 +16,7 @@ import unittest
 
 class TestView(unittest.TestCase):
     test_framework = {}
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.cmd_line = GetUserOptions()

@@ -14,6 +14,7 @@ import cmdline
 
 class TestCmdLine(unittest.TestCase):
     test_framework = {}
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.cmd_line = GetUserOptions()
