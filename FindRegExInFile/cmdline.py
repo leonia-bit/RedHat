@@ -1,7 +1,8 @@
 from utils import init_log
 import optparse
 import re
-import unittest
+import os.path
+
 
 # cmd line: available output format
 
@@ -94,13 +95,10 @@ class GetUserOptions():
         if not (options.color or options.machine or options.underscore):
             self.log.info("Provide one from following options: color|machine|underscore. Program terminated!!!")
             exit(0)
-        '''
-        Get command line arguments files and regexp pattern. 
-        Limitation: file extension should be start from file.*
-        Regexp pattern can't be start from keyword: file
-        '''
+
+        # check if provided command line arguments it is real existed file. if not it is regexp
         for arg in args:
-            if re.search("^file.*", arg):
+            if os.path.exists(arg)  and os.path.isfile(arg):
                 files_list.append(arg)
             else:
                 re_pattern = arg

@@ -34,7 +34,7 @@ class FilesData:
 
             # try block: in case file not exists
             try:
-                f = open("db/" + name, "r")
+                f = open(name, "r")
             except (FileNotFoundError, IOError):
                 print("File: " + name + " not found")
             else:

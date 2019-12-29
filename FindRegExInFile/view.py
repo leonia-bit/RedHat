@@ -30,7 +30,7 @@ def user_input_view(regexp_pattern):
 
 # interface to view all matched data according to regexp pattern and output format
 def show_all_view(file_data_list, regexp_pattern, output_format):
-    print('In our db we have %i lines. Here they are:' % len(file_data_list))
+    print('In our db we have %i lines. Starting inspect:' % len(file_data_list))
     print("Lines that matched following pattern: " + regexp_pattern + " will be displayed")
     print("Following format was selected by user: " + output_format)
 
