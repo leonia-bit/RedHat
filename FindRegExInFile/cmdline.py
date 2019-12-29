@@ -3,7 +3,6 @@ import optparse
 import re
 import os.path
 
-
 # cmd line: available output format
 
 OUTPUT_FORMAT_COLOR = 0
@@ -98,7 +97,7 @@ class GetUserOptions():
 
         # check if provided command line arguments it is real existed file. if not it is regexp
         for arg in args:
-            if os.path.exists(arg)  and os.path.isfile(arg):
+            if os.path.exists(arg) and os.path.isfile(arg):
                 files_list.append(arg)
             else:
                 re_pattern = arg
