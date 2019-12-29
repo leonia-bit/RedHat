@@ -73,7 +73,7 @@ class GetUserOptions():
                 options.underscore = True
             if test_framework["output_format"] == OUTPUT_FORMAT_MACHINE:
                 options.machine = True
-            args = ["file1.txt", "file2.txt", "file3.txt", "[q]{4}"]
+            args = ["db/file1.txt", "db/file2.txt", "db/file3.txt", "[q]{4}"]
 
         self.log.info(("Option: files: y", options.files))
         self.log.info(("Option: regexp: ", options.regexp))
