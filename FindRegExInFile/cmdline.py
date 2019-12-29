@@ -58,16 +58,20 @@ class GetUserOptions():
                                )
 
     # get user options from command line
-    def get_user_options(self, test_framework=False):
+    def get_user_options(self, test_framework=None):
         files_list = []
         re_pattern = ''
         output_format = ''
 
         options, args = self.parser.parse_args()
-        if test_framework:
+        if test_framework["test"]:
             options.regexp = True
-            options.regexp = True
-            options.color = True
+            if test_framework["output_format"] == OUTPUT_FORMAT_COLOR:
+                options.color = True
+            if test_framework["output_format"] == OUTPUT_FORMAT_UNDERSCORE:
+                options.underscore = True
+            if test_framework["output_format"] == OUTPUT_FORMAT_MACHINE:
+                options.machine = True
             args = ["file1.txt", "file2.txt", "file3.txt", "[q]{4}"]
 
         self.log.info(("Option: files: y", options.files))
