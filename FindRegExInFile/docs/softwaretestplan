@@ -71,28 +71,38 @@
    Usability:
       process management during platform using
    E2E:
+   ===
       * offline (without user interaction)
       * online (with user interaction)
    Sanity:
+   =======
       * offline process display data
       * online process display data
    CRUD
+   ====
       * read data from different format files
       * read data from standard input
    GUI
+   ===
       * User interface during interaction with user.
         - clear
         - typo
+
    Volume
+   ======
       * Huge files
+
    I18N
+   ====
       * file's data with not english language
 
    Performance
+   ===========
       * memory usage (huge files)
       * cpu usage (huge files)
 
    Compatibility
+   =============
       * Linux: RedHat: terminal
       * Windows: 10 home: terminal
 
@@ -107,20 +117,24 @@
 
 9. Test tree
    Usability:
+   ==========
     * command line
     * program interface
     * interactive mode
    E2E:
+   ===
     * command line usage
     * offline mode ( read from files)
         - output format: machine, color, underscore
     * online mode (read interactive)
         - output format: machine, color, underscore
    Sanity
+   ======
     * offline mode: read from files
     * online mode: read from user
 
    CRUD
+   ====
    * read from files
      * text file
      * not text file
@@ -128,24 +142,31 @@
      * not english lang.
 
    GUI
+   ===
    * user menu
      - on start
      - on online mode
+
    * output format
      - on online mode
      - in offline mode
        * machine output format
        * color output format
        * underscore output format
+
    Volume
+   ======
        * huge files
          * english
          * not english
          * not text
 
    I18N
+   ====
        * files with not english language
+
    Performance
+   ===========
        * cpu usage
        * memory usage
         - huge files english
@@ -155,6 +176,7 @@
           - a lot of matched patterns in each line
 
    Compatibility
+   =============
        Windows 10 home: command line
        Linux RedHat: terminal
 
