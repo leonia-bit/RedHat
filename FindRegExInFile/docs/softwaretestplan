@@ -1,0 +1,162 @@
+                                                      STP
+                                      Project name: Match Regexp Patterns
+                                                 date: 29/12/2019
+                                              Creator: Leonid Klebanov
+
+========================================================================================================================
+                                                 Table of contents:
+
+                                                1. System Description
+                                                2. Target of test
+                                                3. Documents
+                                                4. Resources and Schedule Planning
+                                                5. Test environment
+                                                6. Test tools
+                                                7. Criteria for entry and exit from tests
+                                                8. Testing Strategy
+                                                    8.1 Test details
+                                                    8.2 Test types
+                                                    8.3 Test management
+                                                9. Test tree
+ ======================================================================================================================
+
+1. System Description
+   Platform to read data from files and print it to user in different format, according to provided regexp pattern.
+
+2. Target of test
+   Check different functions of platform according to requirement for Client Server information system.
+   Check usefulness of the system. Check if system can be stable under different user input.
+
+3. Documents
+   * Requirements
+   * High Level Design
+   * Low Level Design
+
+4. Resources and Schedule Planning
+   - Prepare STP
+   - Prepare STD
+   - Run Tests
+   - Prepare STR
+
+5. Test environment
+   * Windows 10: command line
+   * Linux: RedHat: terminal
+
+6. Test tools
+   * Jira
+   * Taffrail
+   * Github
+
+7. Criteria for entry and exit from tests
+   * enter: online mode(get input from user)  and offline mode(get data from files) are working
+   * exit: online mode(get input from user)  and offline mode(get data from files) are not working
+
+8. Testing Strategy
+   * Platform after unit testing.
+   * Client/Server information system as (database/browser/html)
+   8.1
+   Test details
+   unit tests
+       * black box: user input, platform output
+       * white box:
+            - review
+                 a. Decision coverage
+                 b. sentence coverage
+   Integration: no relevant
+   System: no relevant
+   Acceptance: no relevant
+
+   8.2
+   Test types
+   Usability:
+      process management during platform using
+   E2E:
+      * offline (without user interaction)
+      * online (with user interaction)
+   Sanity:
+      * offline process display data
+      * online process display data
+   CRUD
+      * read data from different format files
+      * read data from standard input
+   GUI
+      * User interface during interaction with user.
+        - clear
+        - typo
+   Volume
+      * Huge files
+   I18N
+      * file's data with not english language
+
+   Performance
+      * memory usage (huge files)
+      * cpu usage (huge files)
+
+   Compatibility
+      * Linux: RedHat: terminal
+      * Windows: 10 home: terminal
+
+   8.3
+   Test management
+   Bug severity      Report            Management
+   =============     ======            ==========
+   Block             PM + TL           Till end of the day
+   High              TL                Next test cycle
+   Medium            developer         Next version
+   Low               open CR           For PM decision
+
+9. Test tree
+   Usability:
+    * command line
+    * program interface
+    * interactive mode
+   E2E:
+    * command line usage
+    * offline mode ( read from files)
+        - output format: machine, color, underscore
+    * online mode (read interactive)
+        - output format: machine, color, underscore
+   Sanity
+    * offline mode: read from files
+    * online mode: read from user
+
+   CRUD
+   * read from files
+     * text file
+     * not text file
+     * english lang.
+     * not english lang.
+
+   GUI
+   * user menu
+     - on start
+     - on online mode
+   * output format
+     - on online mode
+     - in offline mode
+       * machine output format
+       * color output format
+       * underscore output format
+   Volume
+       * huge files
+         * english
+         * not english
+         * not text
+
+   I18N
+       * files with not english language
+   Performance
+       * cpu usage
+       * memory usage
+        - huge files english
+        - huge files not english
+        - huge files not text
+          - long regexp patterns
+          - a lot of matched patterns in each line
+
+   Compatibility
+       Windows 10 home: command line
+       Linux RedHat: terminal
+
+
+
