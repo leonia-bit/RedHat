@@ -55,7 +55,7 @@ def show_all_view(file_data_list, regexp_pattern, output_format):
 # interface to stat interact with user
 def start_view():
     print('RedHat - coding task')
-    print('Do you want to see file data?[y/n]')
+    print('Do you want start?[y/n]')
 
 
 # interface to finish interact with user
