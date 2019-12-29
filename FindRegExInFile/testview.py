@@ -29,12 +29,14 @@ class TestView(unittest.TestCase):
         assert not show_all_view(file_data_list, regexp, o_format), "Module: view Function: show_all_view failed."
 
     def test_view_underscore(self):
+        self.test_framework["test"] = True
         self.test_framework["output_format"] = cmdline.OUTPUT_FORMAT_UNDERSCORE
         f_list, regexp, o_format = self.cmd_line.get_user_options(self.test_framework)
         file_data_list = FilesData(f_list).get_all()
         assert not show_all_view(file_data_list, regexp, o_format), "Module: view Function: show_all_view failed."
 
     def test_view_machine(self):
+        self.test_framework["test"] = True
         self.test_framework["output_format"] = cmdline.OUTPUT_FORMAT_MACHINE
         f_list, regexp, o_format = self.cmd_line.get_user_options(self.test_framework)
         file_data_list = FilesData(f_list).get_all()
